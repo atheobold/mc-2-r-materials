@@ -43,27 +43,46 @@ library(openintro)
 library(palmerpenguins)
 ```
 
-.pull-left[ 
-Tools 
+.huge-text[you...]
+
+.large[
+- know R
+- are familiar with R Markdown
+- are interested in integrating R into your course(s)
 ]
 
+---
+
+class: middle, inverse
+
+.pull-left[
+  .huge-text[Tools]
+]
 .pull-right[
+.large[
 1. At-home Install
 2. RStudio Cloud
 3. Shiny Apps
-4. learnr Tutorials
+4. learnr Tutorials]
 ]
 
 ---
 
-class:center, middle
+class:center, inverse
 
-# At-home Installs
+.huge-text[At-home Installs]
 
 ---
 
-# Cautionary Tale 1:
-## Old versions of Mac
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 1:] 
+]
+
+.pull-right[
+  .large[
+Old versions of Mac]
+]
 
 * Most of what you want to teach will work with older versions of R...
 
@@ -77,19 +96,47 @@ class:center, middle
 
 ---
 
-# Cautionary Tale 2:
-## Installing on any Mac
+class: middle
 
-![](images/maxresdefault.jpg)
+.pull-left[.bitlarger[Cautionary Tale 2:] 
+]
+
+.pull-right[
+  .large[
+Installing on any Mac]
+]
+
+
+```{r echo=FALSE, out.width = "75%", fig.align = "center"}
+knitr::include_graphics("images/maxresdefault.jpg")
+```
 
 ---
 
-# Cautionary Tale 3:
-## All the package headaches
+class: middle
 
+.pull-left[.bitlarger[Cautionary Tale 3:] 
+]
+
+.pull-right[
+  .large[
+All the package headaches]
+]
+
+<center> 
 ![](images/binaries.png)
 
 ---
+
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 3:] 
+]
+
+.pull-right[
+  .large[
+  Continued...]
+]
 
 Do you want to install from sources the package which needs compilation?
 
@@ -99,12 +146,21 @@ Do you want to install from **developer version** sources **as opposed to CRAN v
 
 --
 
+<center> 
+
 ![](https://media1.giphy.com/media/8vUEXZA2me7vnuUvrs/200.gif)
 
 ---
 
-# Cautionary Tale 3:
-## All the package headaches
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 3:] 
+]
+
+.pull-right[
+  .large[
+Continued...]
+]
 
 ```{r, eval = FALSE}
 Error in loadNamespace(name) : there is no package called 'here'
@@ -133,8 +189,15 @@ install.packages("here")
 
 ---
 
-# Cautionary Tale 3:
-## All the package headaches
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 3:] 
+]
+
+.pull-right[
+  .large[
+Continued...]
+]
 
 ```{r, eval = FALSE}
 Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <-
@@ -156,8 +219,15 @@ Try to install again.
 
 ---
 
-# Cautionary Tale 4:
-## Gen Z doesn't understand folders.
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 4:] 
+]
+
+.pull-right[
+  .large[
+Gen Z doesn't understand folders]
+]
 
 Things I have seen students do...
 
@@ -179,8 +249,15 @@ Things I have seen students do...
 
 ---
 
-# Cautionary Tale 5:
-## Equality of assessment
+class: middle
+
+.pull-left[.bitlarger[Cautionary Tale 5:] 
+]
+
+.pull-right[
+  .large[
+Equality of assessment]
+]
 
 
 * Using a Studio computer means students taking exams out of their comfort zone...
@@ -200,16 +277,19 @@ Things I have seen students do...
 
 ---
 
-class: middle
+class:center, inverse
 
-.larger[RStudio Cloud]
+.huge-text[
+.rstudio-blue[RStudio Cloud]
+]
 
 <!-- Add RStudio blue to font families -->
 
 ---
 
 .pull-left[
-### Lots of Friction
+
+.large[**Lots of Friction**]
 
 - Install R
 - Install RStudio
@@ -219,11 +299,13 @@ class: middle
   - ...
 - Load these packages
 - Install git
+- Install MiKteX
 ]
+
 --
 
 .pull-right[
-### Less Friction
+.large[**Less Friction**]
 
 - Go to rstudio.cloud
 - Log in
@@ -235,51 +317,90 @@ class: middle
 
 ---
 
-class: center, middle
+class:center, inverse
 
-# Interactive Coding
+.huge-text[`Shiny` Apps]
 
----
-
-[Example](https://kbodwin.shinyapps.io/Lab_Exercise_CatVars2)
-
-![](app_example.png)
 
 ---
 
-# Pros
+.pull-left[
+.larger[demo:]
+]
+
+.pull-right[
+.small[
+</br>
+</br>
+</br> 
+https://kbodwin.shinyapps.io/Lab_Exercise_CatVars2]
+]
+
+
+```{r echo=FALSE, out.width = "70%", fig.align = "center"}
+knitr::include_graphics("images/app_example.png")
+```
+
+---
+
+.pull-left[
+.large[**Pros**]
+
 
 * Students get experience with code without typing code
 
---
-
 * Gives them an easy "copy-paste" resource
-
---
 
 * No need to install or interact with R/RStudio
 
----
+]
 
-# Cons
+--
+
+.pull-right[
+.large[**Cons**]
 
 * Apps need to be hosted somewhere
 
---
-
 * Many students using app at once = high computing demand
-
---
 
 * Hard to create (for now)
 
----
-
-# Solutions
-
-* `shindig` R package to create your own exercises
+]
 
 ---
+
+class: center
+
+</br>
+</br>
+
+.pull-left[
+.larger[Solutions:]
+]
+
+.pull-right[
+.larger[`shindig`]
+] 
+
+---
+
+.center[
+.larger[`shindig`]
+]
+
+
+* R package to create your own exercises
+
+--
+
+*  Distribute exercises to students in package form
+
+*  More info: https://rstudio.github.io/learnr/publishing.html
+
+
+---
+
 ```{r plot_2, eval = FALSE}
 penguins %>%
   filter(bill_length_mm > 5) %>%
@@ -308,32 +429,9 @@ plotOutput("plot1")
 
 ---
 
-# Solutions
+class:center, inverse
 
-* `shindig` R package to create your own exercises
-
---
-
-*  Distribute exercises to students in package form
-
-*  More info: https://rstudio.github.io/learnr/publishing.html
-
----
-
-class: center, middle
-
-# learnr tutorials
-
----
-
-.huge-text[you...]
-
-.large[
-- know R
-- are familiar with R Markdown
-- are interested in integrating R into your course(s)
-- would like to scaffold the learning process
-]
+.huge-text[`learnr` Tutorials]
 
 ---
 
@@ -350,7 +448,7 @@ class: center, middle
 
 - learnr is on CRAN
 
-```{r eval=FALSE}
+```{r eval = FALSE}
 install.packages("learnr")
 ```
   
@@ -374,9 +472,12 @@ class: middle
 
 ---
 
-class: middle, inverse
+class:center
 
-.huge-text[learnr]
+</br>
+
+.larger[Components of a `learnr` tutorial]
+
 
 ---
 
@@ -445,7 +546,7 @@ quiz(
 </br>
 </br> 
 
-```{r echo=FALSE, out.width="70%", out.height = "70%", fig.align="center"}
+```{r echo=FALSE, out.width="120%", out.height = "120%", fig.align="center"}
 knitr::include_graphics("images/code-chunk-highlighted.jpg")
 ```
 
@@ -472,7 +573,7 @@ knitr::include_graphics("images/learnr-solution.jpg")
 ]
 
 - Deploy on
-  - shinyapps.io
+  - shinyapps.io (variety of pricing plans available)
   - RStudio Connect (free for academic use, requires setup)
 
 - Essential reading:
@@ -483,27 +584,13 @@ knitr::include_graphics("images/learnr-solution.jpg")
 
 ---
 
-.large[
-.hand[Q: Where can I find more examples?]
-]
-
-* Both the learnr package and gradethis have a large number of examples, e.g.
-
-```{r eval = FALSE}
-gradethis::gradethis_demo()
-```
-
-* [RStudio Cloud Primers](https://rstudio.cloud/learn/primers) - these are all learnr tutorials and their code is available on [github](https://github.com/rstudio-education/primers).
-
-* [Data Science in a Box](http://datasciencebox.org) - we will be adding learnr tutorials we develop here.
-
----
-
 class: middle, inverse
 
 .huge-text[Questions to Ponder]
 
 ---
+
+class: middle
 
 # What are my resources?
 
@@ -515,13 +602,15 @@ class: middle, inverse
 
 --
 
-* Can you acquire funding for RStudio.Cloud?  Can you charge students to use it?
+* Can you acquire funding for RStudio Cloud?  Can you charge students to use it?
 
 --
 
 * How much do **you** enjoy creating/teaching with R resources?
 
 ---
+
+class: middle
 
 # What are my learning objectives?
 
@@ -533,7 +622,7 @@ class: middle, inverse
 
 * If **understanding how statisticians use code** is one of them ...
 
-... consider `shindig` tutorials or RS Cloud with pre-supplied code.
+... consider `shindig` tutorials, `learnr` tutorials with pre-supplied code, or RS Cloud.
 
 --
 
@@ -542,6 +631,8 @@ class: middle, inverse
 ... consider using R as a back-end only, to make your own life easier.
 
 ---
+
+class: middle
 
 ## References 
 
