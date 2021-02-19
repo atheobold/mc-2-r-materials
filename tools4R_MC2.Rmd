@@ -283,8 +283,6 @@ class:center, inverse
 .rstudio-blue[RStudio Cloud]
 ]
 
-<!-- Add RStudio blue to font families -->
-
 ---
 
 .pull-left[
@@ -312,6 +310,157 @@ class:center, inverse
 
 ```{r hello-r, eval=FALSE}
 >hello R!
+```
+]
+
+.footnote[
+.small[
+__*__ Çetinkaya-Rundel, Mine. "Teaching R online with RStudio Cloud." [RStudio Webinar](https://rstudio.com/resources/webinars/teaching-r-online-with-rstudio-cloud/). 
+]
+]
+
+---
+
+class: center
+
+## What is RStudio Cloud?
+
+.pull-left-narrow[
+```{r echo=FALSE}
+knitr::include_graphics("images/cloud.png")
+```
+]
+
+.pull-right-wide[
+.large[We created [**RStudio Cloud**](https://rstudio.cloud/) to make it easy for professionals, hobbyists, trainers, teachers, and students to do, share, teach, and learn data science using R.]
+]
+
+---
+
+background-image: url(images/rstudio-annotated.jpg)
+background-position: center
+background-repeat: no-repeat
+background-size: 800px
+class: middle
+
+---
+
+background-image: url(images/cloud-annotated.jpg)
+background-position: center
+background-repeat: no-repeat
+background-size: 800px
+class: middle
+
+---
+
+## Workspaces
+
+<!-- - When you create an account on RStudio Cloud you get a workspace of your own -->
+
+<!-- - You can add a new workspace and control its permissions -->
+
+<!-- - Projects in either workspace can be public or private -->
+
+```{r echo=FALSE, out.width="90%", fig.align="center"}
+knitr::include_graphics("images/cloud-workspaces.jpg")
+```
+
+---
+
+
+## Projects
+
+.pull-left[
+A new project in RStudio Cloud
+```{r echo=FALSE, out.width="90%", fig.align="center"}
+knitr::include_graphics("images/cloud-project.jpg")
+```
+]
+.pull-right[
+is a new project in RStudio IDE
+```{r echo=FALSE, out.width="90%", fig.align="center"}
+knitr::include_graphics("images/rstudio-project.jpg")
+```
+]
+
+.alert[
+**PSA:** If you use RStudio, use projects! Trust me, you won’t regret it.
+]
+
+---
+
+## Sharing Options
+
+- Option 1: Share a single project
+
+- Option 2: Invite users to a workspace (presumably with many projects)
+
+---
+
+## Sharing a Single Project  
+
+
+.pull-left[
+### Good!
+
+- Students land directly in a project upon login
+- Works well for workshops where all work will be completed in a single project
+- Also great for sharing code in general, e.g. collaboration, reprexes, etc.
+]
+
+--
+
+.pull-right[
+### Not so good...
+
+- Students need to remember to make a copy of the project (which means you need to remember to remind them!)
+- You can't keep track which students started their assignment
+- You can't easily peek into student projects -- they would need to explicitly share the project with you
+]
+
+---
+
+## Sharing a Workspace
+
+.pull-left[
+### Good!
+
+- Base projects with desired packages installed
+- Assignments -- no more "make a copy of the project before starting work"
+- Peek into students’ projects
+]
+
+--
+
+.pull-right[
+### Not so good...
+
+- Students land in the workspace, may need to provide instructions for the next steps
+- Git config for each project can get tedious and doesn't reflect realistic practice
+]
+
+---
+
+class:center 
+
+## Pricing 
+
+.pull-left[
+```{r echo=FALSE, out.height = "150%", fig.align="center"}
+knitr::include_graphics("images/pricing-free.png")
+```
+
+</br>
+</br>
+
+```{r echo=FALSE, out.width="150%", fig.align="center"}
+knitr::include_graphics("images/pricing-organization.png")
+```
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="150%", fig.align="center"}
+knitr::include_graphics("images/pricing-instructor.png")
 ```
 ]
 
@@ -451,7 +600,7 @@ class:center, inverse
 ```{r eval = FALSE}
 install.packages("learnr")
 ```
-  
+
 ---
 
 background-image: url(images/learnr.png)
@@ -629,11 +778,3 @@ class: middle
 * If **software is not a learning objective**...
 
 ... consider using R as a back-end only, to make your own life easier.
-
----
-
-class: middle
-
-## References 
-
-Reference to Mine's presentation on learnr and RStudio Cloud
