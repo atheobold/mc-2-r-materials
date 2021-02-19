@@ -1,0 +1,12 @@
+name: tools4r_mc24
+title: tools4R_MC2
+username: kbodwin
+account: kbodwin
+server: rstudio.csm.calpoly.edu
+hostUrl: https://rstudio.csm.calpoly.edu/__api__
+appId: 239
+bundleId: 503
+url: https://rstudio.csm.calpoly.edu/content/239/
+when: 1613770308.78473
+asMultiple: TRUE
+asStatic: FALSE

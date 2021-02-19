@@ -1,0 +1,13 @@
+name: tools4r_mc23
+title: tools4R_MC2
+username: kbodwin
+account: kbodwin
+server: rstudio.csm.calpoly.edu
+hostUrl: https://rstudio.csm.calpoly.edu/__api__
+appId: 238
+bundleId: 502
+url: https://rstudio.csm.calpoly.edu/content/238/
+when: 1613770244.11832
+asMultiple: TRUE
+asStatic: FALSE
+ignoredFiles: setup.Rmd
