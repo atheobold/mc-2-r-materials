@@ -25,6 +25,8 @@ output:
 
 ```{r set-theme, include=FALSE}
 library(xaringanthemer)
+library(xaringan)
+
 style_duo_accent(
   primary_color      = "#0F4C81", # pantone classic blue
   secondary_color    = "#B6CADA", # pantone baby blue
@@ -33,14 +35,6 @@ style_duo_accent(
   code_font_google   = google_font("Source Code Pro"),
   text_font_size     = "30px"
 )
-```
-
-
-```{r load-packages, message=FALSE, echo=FALSE}
-library(tidyverse)
-library(broom)
-library(openintro)
-library(palmerpenguins)
 ```
 
 .huge-text[you...]
@@ -352,6 +346,31 @@ background-size: 800px
 class: middle
 
 ---
+class: center
+
+## Projects
+
+.pull-left[
+</br>
+A new project in RStudio Cloud
+```{r echo=FALSE, out.width="120%", fig.align="center"}
+knitr::include_graphics("images/cloud-project.jpg")
+```
+]
+
+.pull-right[
+</br>
+is a new project in RStudio IDE
+```{r echo=FALSE, out.width="90%", fig.align="center"}
+knitr::include_graphics("images/rstudio-project.jpg")
+```
+]
+
+.alert[
+**PSA:** If you use RStudio, use projects! Trust me, you won’t regret it.
+]
+
+---
 
 ## Workspaces
 
@@ -367,38 +386,24 @@ knitr::include_graphics("images/cloud-workspaces.jpg")
 
 ---
 
-
-## Projects
-
-.pull-left[
-A new project in RStudio Cloud
-```{r echo=FALSE, out.width="90%", fig.align="center"}
-knitr::include_graphics("images/cloud-project.jpg")
-```
-]
-.pull-right[
-is a new project in RStudio IDE
-```{r echo=FALSE, out.width="90%", fig.align="center"}
-knitr::include_graphics("images/rstudio-project.jpg")
-```
-]
-
-.alert[
-**PSA:** If you use RStudio, use projects! Trust me, you won’t regret it.
-]
-
----
-
 ## Sharing Options
 
+</br> 
+
 - Option 1: Share a single project
+--
 
 - Option 2: Invite users to a workspace (presumably with many projects)
 
 ---
 
-## Sharing a Single Project  
+<center>
 
+.bitlarger[**Sharing a Single Project**]
+
+</center>
+
+</br>
 
 .pull-left[
 ### Good!
@@ -420,9 +425,16 @@ knitr::include_graphics("images/rstudio-project.jpg")
 
 ---
 
-## Sharing a Workspace
+<center>
+
+.bitlarger[**Sharing a Workspace**]
+
+</center>
+
+</br>
 
 .pull-left[
+
 ### Good!
 
 - Base projects with desired packages installed
@@ -441,16 +453,15 @@ knitr::include_graphics("images/rstudio-project.jpg")
 
 ---
 
-class:center 
-
-## Pricing 
+.large[
+.hand[Q: How do I access RStudio Cloud?]
+]
 
 .pull-left[
 ```{r echo=FALSE, out.height = "150%", fig.align="center"}
 knitr::include_graphics("images/pricing-free.png")
 ```
 
-</br>
 </br>
 
 ```{r echo=FALSE, out.width="150%", fig.align="center"}
@@ -459,6 +470,10 @@ knitr::include_graphics("images/pricing-organization.png")
 ]
 
 .pull-right[
+
+</br>
+</br>
+
 ```{r echo=FALSE, out.width="150%", fig.align="center"}
 knitr::include_graphics("images/pricing-instructor.png")
 ```
@@ -493,7 +508,7 @@ knitr::include_graphics("images/app_example.png")
 ---
 
 .pull-left[
-.large[**Pros**]
+.large[**Good!**]
 
 
 * Students get experience with code without typing code
@@ -507,7 +522,7 @@ knitr::include_graphics("images/app_example.png")
 --
 
 .pull-right[
-.large[**Cons**]
+.large[**Not so good...**]
 
 * Apps need to be hosted somewhere
 

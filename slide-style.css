@@ -104,13 +104,13 @@ h4 {
 
 /* Handwriting */
 .hand{
-  font-family: 'Source Sans Pro', cursive;
+  font-family: 'Montserrat', cursive;
   font-weight: bold;
   color: var(--classic-blue);
-  font-size: 150%;
+  font-size: 125%;
 }
 .hand-large{
-  font-family: 'Source Sans Pro', cursive;
+  font-family: 'Montserat', cursive;
   color: var(--classic-blue);
   font-size: 500%;
 }
