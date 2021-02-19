@@ -1,7 +1,7 @@
 ---
 title: "`r emo::ji('hammer')` Tools for Integrating Data Science in the Introductory and Intermediate Statistics Classroom"
 subtitle: "<br> `r emo::ji('link')` [http://bit.ly/tools4ds](http://bit.ly/tools4ds)"
-author: "<br> `r emo::ji('rainbow')` Dr. Allison Theobold <br> `r emo::ji('crown')` Dr. Kelly Bodwin"
+author: "<br> `r emo::ji('rainbow')` Dr. Allison Theobold <br> `r emo::ji('dice')` Dr. Kelly Bodwin"
 date: "February 19, 2021" 
 output:
   xaringan::moon_reader:
@@ -42,6 +42,288 @@ library(broom)
 library(openintro)
 library(palmerpenguins)
 ```
+
+.pull-left[ 
+Tools 
+]
+
+.pull-right[
+1. At-home Install
+2. RStudio Cloud
+3. Shiny Apps
+4. learnr Tutorials
+]
+
+---
+
+class:center, middle
+
+# At-home Installs
+
+---
+
+# Cautionary Tale 1:
+## Old versions of Mac
+
+* Most of what you want to teach will work with older versions of R...
+
+--
+
+* ... but earlier than **R 3.4** is a problem.
+
+--
+
+* **Solution**:  Have students on old machines use RS Cloud.
+
+---
+
+# Cautionary Tale 2:
+## Installing on any Mac
+
+<!-- ![](maxresdefault.jpg) -->
+
+---
+
+# Cautionary Tale 3:
+## All the package headaches
+
+<!-- ![](binaries.png) -->
+
+---
+
+Do you want to install from sources the package which needs compilation?
+
+--
+
+Do you want to install from **developer version** sources **as opposed to CRAN version** the package which needs compilation?
+
+--
+
+<!-- ![](https://media1.giphy.com/media/8vUEXZA2me7vnuUvrs/200.gif) -->
+
+---
+
+# Cautionary Tale 3:
+## All the package headaches
+
+```{r, eval = FALSE}
+Error in loadNamespace(name) : there is no package called 'here'
+```
+
+or
+
+```{r, eval = FALSE}
+Error in library(here) : there is no package called 'here'
+```
+--
+
+* This means that a dependency didn't auto-install like it should have.
+
+--
+
+* Why?  
+
+--
+
+* No idea.  Just install the package directly
+
+```{r, eval = FALSE}
+install.packages("here")
+```
+
+---
+
+# Cautionary Tale 3:
+## All the package headaches
+
+```{r, eval = FALSE}
+Error: package or namespace load failed for 'tidyverse' in loadNamespace(j <-
+i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]): namespace 'tibble' 
+2.1.3 is already loaded, but >= 3.0.0 is required
+```
+
+--
+
+This means you're trying to update a package that's in use!
+
+--
+
+Clear out the **environment**, including "hidden objects"
+
+Close other R/RStudio windows.
+
+Try to install again.
+
+---
+
+# Cautionary Tale 4:
+## Gen Z doesn't understand folders.
+
+Things I have seen students do...
+
+--
+
+* Download a dataset to a random folder, expect it to be read into R automatically.
+
+--
+
+* Never **save** or **knit** their R Markdown file.  Lose everything when something crashes.
+
+--
+
+* Re-download the lab every time they want to work on it, open it from their downloads folder, copy paste code from a Google Doc.
+
+--
+
+* Re-download R or RStudio every time they want to open it.
+
+---
+
+# Cautionary Tale 5:
+## Equality of assessment
+
+
+* Using a Studio computer means students taking exams out of their comfort zone...
+
+--
+
+* ... but troubleshooting individual laptops during an exam is impossible!
+
+--
+
+* Not all students can afford the most powerful computer.
+
+--
+
+* Not all students have a laptop computer they can bring to class.
+
+
+---
+
+class: middle
+
+.larger[RStudio Cloud]
+
+<!-- Add RStudio blue to font families -->
+
+---
+
+.pull-left[
+### Lots of Friction
+
+- Install R
+- Install RStudio
+- Install the following packages:
+  - rmarkdown
+  - tidyverse 
+  - ...
+- Load these packages
+- Install git
+]
+--
+
+.pull-right[
+### Less Friction
+
+- Go to rstudio.cloud
+- Log in
+
+```{r hello-r, eval=FALSE}
+>hello R!
+```
+]
+
+---
+
+class: center, middle
+
+# Interactive Coding
+
+---
+
+[Example](https://kbodwin.shinyapps.io/Lab_Exercise_CatVars2)
+
+![](app_example.png)
+
+---
+
+# Pros
+
+* Students get experience with code without typing code
+
+--
+
+* Gives them an easy "copy-paste" resource
+
+--
+
+* No need to install or interact with R/RStudio
+
+---
+# Cons
+
+* Apps need to be hosted somewhere
+
+--
+
+* Many students using app at once = high computing demand
+
+--
+
+* Hard to create (for now)
+
+---
+
+# Solutions
+
+* `shindig` R package to create your own exercises
+
+---
+```{r plot_2, eval = FALSE}
+penguins %>%
+  filter(bill_length_mm > 5) %>%
+  ggplot(aes(x  = {quant_var}, fill = {cat_var})) +
+  geom_histogram()
+```
+
+```{r, eval = FALSE}
+textInput("quant_var", 
+          "What quantitative variable?")
+
+textInput("cat_var", 
+          "What categorical variable?")
+
+```
+
+```{r, eval = FALSE}
+decorate_shiny("plot1") %>%
+  shindig("renderPlot")
+  
+```
+
+```{r, eval = FALSE}
+plotOutput("plot1") 
+```
+
+---
+
+# Solutions
+
+* `shindig` R package to create your own exercises
+
+--
+
+*  Distribute exercises to students in package form
+
+*  More info: https://rstudio.github.io/learnr/publishing.html
+
+---
+
+class: center, middle
+
+# learnr tutorials
+
+---
 
 .huge-text[you...]
 
@@ -206,7 +488,7 @@ knitr::include_graphics("images/learnr-solution.jpg")
 
 * Both the learnr package and gradethis have a large number of examples, e.g.
 
-```{r eval=FALSE}
+```{r eval = FALSE}
 gradethis::gradethis_demo()
 ```
 
@@ -216,50 +498,45 @@ gradethis::gradethis_demo()
 
 ---
 
-class: middle
-
-.pull-left[
-  .huge-text[Why]
-]
-.pull-right[
-  .larger[
-  RStudio  
-  in the cloud?
-  ]
-]
+# Questions to Ponder
 
 ---
 
-.pull-left[
-### lots of friction points
+# What are my resources?
 
-- Install R
-- Install RStudio
-- Install the following packages:
-  - rmarkdown
-  - tidyverse 
-  - ...
-- Load these packages
-- Install git
-]
+* Does your university have server time for hosting `learnr`/`shindig` tutorials?
+
 --
-.pull-right[
-### much less friction
 
-- Go to rstudio.cloud
-- Log in
+* If not, does your university have funding sources to host these things elsewhere?  (e.g. shinyapps.io)
 
-```{r hello-r, eval=FALSE}
->hello R!
-```
-]
+--
+
+* Can you acquire funding for RStudio.Cloud?  Can you charge students to use it?
+
+--
+
+* How much do **you** enjoy creating/teaching with R resources?
 
 ---
 
+# What are my learning objectives?
 
-## Activity 
+* If **learning R** is one of them... 
 
-.hand[while we wait to get started...]
+...students should probably have a native install!
+
+--
+
+* If **understanding how statisticians use code** is one of them ...
+
+... consider `shindig` tutorials or RS Cloud with pre-supplied code.
+
+--
+
+* If **software is not a learning objective**...
+
+... consider using R as a back-end only, to make your own life easier.
 
 ---
 
