@@ -80,14 +80,14 @@ class:center, middle
 # Cautionary Tale 2:
 ## Installing on any Mac
 
-<!-- ![](maxresdefault.jpg) -->
+![](images/maxresdefault.jpg)
 
 ---
 
 # Cautionary Tale 3:
 ## All the package headaches
 
-<!-- ![](binaries.png) -->
+![](images/binaries.png)
 
 ---
 
@@ -99,7 +99,7 @@ Do you want to install from **developer version** sources **as opposed to CRAN v
 
 --
 
-<!-- ![](https://media1.giphy.com/media/8vUEXZA2me7vnuUvrs/200.gif) -->
+![](https://media1.giphy.com/media/8vUEXZA2me7vnuUvrs/200.gif)
 
 ---
 
@@ -260,6 +260,7 @@ class: center, middle
 * No need to install or interact with R/RStudio
 
 ---
+
 # Cons
 
 * Apps need to be hosted somewhere
@@ -498,7 +499,9 @@ gradethis::gradethis_demo()
 
 ---
 
-# Questions to Ponder
+class: middle, inverse
+
+.huge-text[Questions to Ponder]
 
 ---
 
