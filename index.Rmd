@@ -348,21 +348,6 @@ background-size: 800px
 class: middle
 
 ---
-
-## Workspaces
-
-<!-- - When you create an account on RStudio Cloud you get a workspace of your own -->
-
-<!-- - You can add a new workspace and control its permissions -->
-
-<!-- - Projects in either workspace can be public or private -->
-
-```{r echo=FALSE, out.width="90%", fig.align="center"}
-knitr::include_graphics("images/cloud-workspaces.jpg")
-```
-
----
-
 class: center
 
 ## Projects
@@ -386,6 +371,20 @@ knitr::include_graphics("images/rstudio-project.jpg")
 .alert[
 **PSA:** If you use RStudio, use projects! Trust me, you won’t regret it.
 ]
+
+---
+
+## Workspaces
+
+<!-- - When you create an account on RStudio Cloud you get a workspace of your own -->
+
+<!-- - You can add a new workspace and control its permissions -->
+
+<!-- - Projects in either workspace can be public or private -->
+
+```{r echo=FALSE, out.width="90%", fig.align="center"}
+knitr::include_graphics("images/cloud-workspaces.jpg")
+```
 
 ---
 
@@ -420,12 +419,10 @@ knitr::include_graphics("images/rstudio-project.jpg")
 
 .pull-right[
 ### Not so good...
-```{r echo=FALSE, out.width="60%", fig.align="center"}
-knitr::include_graphics("images/cloud-copy.png")
-```
+
 - Students need to remember to make a copy of the project (which means you need to remember to remind them!)
 - You can't keep track which students started their assignment
-- You can't easily peek into student projects
+- You can't easily peek into student projects -- they would need to explicitly share the project with you
 ]
 
 ---
@@ -812,7 +809,7 @@ class: middle
 @mtstatistics
 
 `r fa(name = "github", fill = "steelblue")`
-@atheobold
+github.com/atheobold
 
 
 ]
@@ -825,7 +822,7 @@ class: middle
 @kellybodwin
 
 `r fa(name = "github", fill = "steelblue")`
-@kbodwin
+github.com/kbodwin
 
 
 ]
