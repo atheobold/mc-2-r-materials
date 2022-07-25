@@ -67,34 +67,7 @@ class: middle, inverse
 
 class:center
 
-.larger[RStudio Cloud]
-
---
-
-.pull-left[
-
-.large[**Lots of Friction**]
-
-- Install R
-- Install RStudio
-- Install the following packages: rmarkdown, tidyverse, ...
-- Load these packages
-- Install git
-- Install MiKteX
-]
-
---
-
-.pull-right[
-.large[**Less Friction**]
-
-- Go to rstudio.cloud
-- Log in
-
-```{r hello-r, eval=FALSE}
-> hello R!
-```
-]
+![](images/anti_install.jpeg)
 
 .footnote[
 .small[
