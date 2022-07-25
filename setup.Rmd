@@ -22,7 +22,7 @@ layout: true
   
 <div class="my-footer">
 <span>
-<a href="http://bit.ly/tools4ds" target="_blank"><b>http://bit.ly/tools4ds</b></a> - Dr. Allison Theobold & Dr. Kelly Bodwin
+<a href="" target="_blank"><b></b></a>Allison Theobold, Cal Poly
 </span>
 </div> 
 ---
